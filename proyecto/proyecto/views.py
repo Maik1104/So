@@ -10,4 +10,13 @@ def inicio(request):
     carpetas2 = []
     for i in range(1, len(carpetas)):
         carpetas2.append(carpetas[i][2:])
-    return render(request, "index.html", {"ubicacion":ubicacion, "carpetas":carpetas2})
+
+
+    archivos = getoutput("find . -maxdepth 1 -type f")
+    archivos = carpetas.split("\n")
+    archivos2 = []
+    for i in range(len(archivos)):
+        archivos2.append(archivos[i][2:])
+
+
+    return render(request, "index.html", {"ubicacion":ubicacion, "carpetas":carpetas2, "archivos":archivos2})

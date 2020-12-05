@@ -50,12 +50,22 @@
         <div id="response">
             <p>Estamos en: {{ubicacion}}</p>
             <br>
-            <p>Carpetas:
+            <p>
+            Carpetas:
                 {% for i in carpetas %}
 
                 <p>{{i}}</p>
 
                 {% endfor %}
+            </p>
+            <p>
+                Archivos:
+                {% for i in archivos %}
+
+                <p>{{i}}</p>
+
+                {% endfor %}
+
             </p>
         </div>
     </div>
