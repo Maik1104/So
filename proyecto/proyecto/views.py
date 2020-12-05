@@ -4,7 +4,6 @@ from os import system
 
 def inicio(request):
 
-    os.system("cd ")
 
     ubicacion = getoutput("pwd")
     carpetas = getoutput("find . -maxdepth 1 -type d")
