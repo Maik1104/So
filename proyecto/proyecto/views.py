@@ -13,7 +13,7 @@ def inicio(request):
 
 
     archivos = getoutput("find . -maxdepth 1 -type f")
-    archivos = carpetas.split("\n")
+    archivos = archivos.split("\n")
     archivos2 = []
     for i in range(len(archivos)):
         archivos2.append(archivos[i][2:])
