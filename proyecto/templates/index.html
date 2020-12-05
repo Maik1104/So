@@ -1,43 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Directorio activo</title>
 
-  	  {# Cargamos la librería #}
-	  {% load bootstrap4 %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo SO</title>
+    <style>
+    h1{
+    color: blue;
+    border-bottom: 3px solid blue;
+    text-align: center;
+}
 
-	  {# CSS Bootstrap #}
-	  {% bootstrap_css %}
-    <style>body {background-color:beige;}</style>
-  </head>
+#execute{
+    background-color: rgb(159, 232, 235);
+    border-radius: 5px;
+    font-size: large;
+}
+
+#parameter{
+    height: 20px;
+    width: 156px;
+}
+
+#inputPar{
+    margin: 0px;
+}
+
+.form{
+    margin: 0px 20px 10px 0px;
+}
+
+.container{
+    border: 3px solid gray;
+    background-color: lightblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+</style>
+
+</head>
+
 <body>
+    <div id="panel">
+        <h1>Ventana del Explorador de Archivos</h1>
+        <div id="response">
+            <p>Acá va lo que devuelve el Comando</p>
+        </div>
+    </div>
+    <div>
+        <form action="">
+            <div class="container">
+                <div class="form">
+                    <input type="radio" id="createFile" name="option">
+                    <label for="createFile">Crear Archivo</label><br>
+                    <input type="radio" id="createFolder" name="option">
+                    <label for="createFolder">Crear Carpeta</label><br>
+                    <input type="radio" id="changeName" name="option">
+                    <label for="changeName">Cambiar Nombre</label><br>
+                </div>
+                <div class="form">
+                    <input type="radio" id="deleteFile" name="option">
+                    <label for="deleteFile">Eliminar Archivo</label><br>
+                    <input type="radio" id="copyFile" name="option">
+                    <label for="copyFile">Copiar Archivo</label><br>
+                    <input type="radio" id="pasteFile" name="option">
+                    <label for="pasteFile">Pegar Archivo</label><br>
+                </div>
+                <div class="form">
+                    <input type="radio" id="seeInfo" name="option">
+                    <label for="seeInfo">Ver Permisos</label><br>
+                    <input type="radio" id="changeInfo" name="option">
+                    <label for="changeInfo">Cambiar Permisos</label><br>
+                    <input type="radio" id="changeOwner" name="option">
+                    <label for="changeOwner">Cambiar Propietario</label><br>
+                </div>
+                <div class="form">
+                    <input type="radio" id="moveFile" name="option">
+                    <label for="moveFile">Mover Archivo</label><br>
+                    <input type="radio" id="cutFile" name="option">
+                    <label for="cutFile">Cortar Archivo</label>
+                </div>
+                <div class="form">
+                    <label id="inputPar" for="parameter">Parámetros Adicionales:</label>
+                    <input id="parameter" type="text" placeholder="Ingrese parámetros"><br>
+                </div>
+                <input type="submit" id="execute" value="Ejecutar Comando"></button>
+            </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="">Directorio activo</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-
-    </ul>
-    <form class="form-inline my-2 my-lg-0" action="/busqueda/" method="GET">
-      <input class="form-control mr-sm-2" name="aBuscar" type="search" placeholder="Buscar" aria-label="Buscar">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-
-
-    {% bootstrap_javascript jquery='full' %}
+        </form>
+    </div>
 </body>
+
 </html>
