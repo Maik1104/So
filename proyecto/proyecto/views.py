@@ -1,5 +1,12 @@
 from django.shortcuts import render
+from subprocess import *
+
 
 def inicio(request):
 
-    return render(request, "index.html")
+    ubicacion=getoutput("pwd")
+
+    return render(request, "index.html", {"ubicacion":ubicacion})
+
+def funcion(request):
+
