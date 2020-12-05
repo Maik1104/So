@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from subprocess import *
-import os
+from os import system
 
 def inicio(request):
 
