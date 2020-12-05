@@ -4,6 +4,8 @@ from subprocess import *
 
 def inicio(request):
 
+    os.system("cd ")
+
     ubicacion = getoutput("pwd")
     carpetas = getoutput("find . -maxdepth 1 -type d")
     carpetas = carpetas.split("\n")
